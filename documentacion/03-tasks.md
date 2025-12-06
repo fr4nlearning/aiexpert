@@ -47,49 +47,49 @@
 ## 3. Capa de datos – Abacus.AI
 
 ### Tarea 3.1: DTO de respuesta de la IA
-- [ ] Crear `PosterAnalysisDto` para mapear el JSON de la IA:
-  - [ ] `titulo: String?`
-  - [ ] `tipo: String?`
-  - [ ] `plataforma: String?`
-  - [ ] `fecha_estreno: String?`
+- [x] Crear `PosterAnalysisDto` para mapear el JSON de la IA:
+  - [x] `titulo: String?`
+  - [x] `tipo: String?`
+  - [x] `plataforma: String?`
+  - [x] `fecha_estreno: String?`
 
 ### Tarea 3.2: Definir interfaz Retrofit
-- [ ] Crear `AbacusApiService`:
-  - [ ] Método `analyzePoster(...)` que:
-    - [ ] Reciba imagen y prompt según formato de Abacus.AI.
-    - [ ] Devuelva un tipo de respuesta que contenga el JSON del análisis.
-- [ ] Configurar el `Retrofit` builder (baseUrl genérica que luego se rellenará).
+- [x] Crear `AbacusApiService`:
+  - [x] Método `analyzePoster(...)` que:
+    - [x] Reciba imagen y prompt según formato de Abacus.AI.
+    - [x] Devuelva un tipo de respuesta que contenga el JSON del análisis.
+- [x] Configurar el `Retrofit` builder (baseUrl genérica que luego se rellenará).
 
 ### Tarea 3.3: Implementar `AbacusRemoteDataSource`
-- [ ] Crear clase que:
-  - [ ] Reciba `AbacusApiService`.
-  - [ ] Prepare la petición (imagen en base64/multipart + prompt).
-  - [ ] Llame al endpoint de Abacus.AI.
-  - [ ] Devuelva `PosterAnalysisDto` o lance error si algo falla.
+- [x] Crear clase que:
+  - [x] Reciba `AbacusApiService`.
+  - [x] Prepare la petición (imagen en base64/multipart + prompt).
+  - [x] Llame al endpoint de Abacus.AI.
+  - [x] Devuelva `PosterAnalysisDto` o lance error si algo falla.
 
 ### Tarea 3.4: Mapper DTO → dominio
-- [ ] Crear funciones o clases de mapeo:
-  - [ ] De `PosterAnalysisDto` a `PosterAnalysisResult`.
-  - [ ] Lógica:
-    - [ ] `tipo`:
-      - [ ] `"pelicula"` → `PosterType.PELÍCULA`
-      - [ ] `"serie"` → `PosterType.SERIE`
-      - [ ] otros / null → `PosterType.DESCONOCIDO`
-    - [ ] `plataforma`:
-      - [ ] `"netflix"` → `Platform.NETFLIX`
-      - [ ] `"amazon"` → `Platform.AMAZON`
-      - [ ] `"disney"` → `Platform.DISNEY`
-      - [ ] `"apple"` → `Platform.APPLE`
-      - [ ] otros / null → `Platform.DESCONOCIDA`
-    - [ ] `fecha_estreno`:
-      - [ ] Copiar tal cual a `fechaEstreno` (puede ser null).
+- [x] Crear funciones o clases de mapeo:
+  - [x] De `PosterAnalysisDto` a `PosterAnalysisResult`.
+  - [x] Lógica:
+    - [x] `tipo`:
+      - [x] `"pelicula"` → `PosterType.PELÍCULA`
+      - [x] `"serie"` → `PosterType.SERIE`
+      - [x] otros / null → `PosterType.DESCONOCIDO`
+    - [x] `plataforma`:
+      - [x] `"netflix"` → `Platform.NETFLIX`
+      - [x] `"amazon"` → `Platform.AMAZON`
+      - [x] `"disney"` → `Platform.DISNEY`
+      - [x] `"apple"` → `Platform.APPLE`
+      - [x] otros / null → `Platform.DESCONOCIDA`
+    - [x] `fecha_estreno`:
+      - [x] Copiar tal cual a `fechaEstreno` (puede ser null).
 
 ### Tarea 3.5: Implementar `PosterRepository`
-- [ ] Definir interfaz `PosterRepository`:
-  - [ ] `suspend fun analyzePoster(imageBytes: ByteArray): PosterAnalysisResult`
-- [ ] Crear `PosterRepositoryImpl`:
-  - [ ] Usa `AbacusRemoteDataSource`.
-  - [ ] Gestiona errores básicos (propagación de excepciones).
+- [x] Definir interfaz `PosterRepository`:
+  - [x] `suspend fun analyzePoster(imageBytes: ByteArray): PosterAnalysisResult`
+- [x] Crear `PosterRepositoryImpl`:
+  - [x] Usa `AbacusRemoteDataSource`.
+  - [x] Gestiona errores básicos (propagación de excepciones).
 
 ## 4. Capa de dominio – Implementación del caso de uso
 
