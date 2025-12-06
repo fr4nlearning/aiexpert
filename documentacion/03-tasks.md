@@ -94,11 +94,11 @@
 ## 4. Capa de dominio – Implementación del caso de uso
 
 ### Tarea 4.1: Implementar `AnalyzePosterUseCase`
-- [ ] Inyectar `PosterRepository`.
-- [ ] Implementar:
-  - [ ] Llamada a `repository.analyzePoster(imageBytes)`.
-  - [ ] Envolver el resultado en `Result.success`.
-  - [ ] En caso de excepción, devolver `Result.failure`.
+- [x] Inyectar `PosterRepository`.
+- [x] Implementar:
+  - [x] Llamada a `repository.analyzePoster(imageBytes)`.
+  - [x] Envolver el resultado en `Result.success`.
+  - [x] En caso de excepción, devolver `Result.failure`.
 
 ## 5. Capa de presentación – ViewModel y estado
 
