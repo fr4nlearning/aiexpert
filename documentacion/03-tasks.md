@@ -3,28 +3,28 @@
 ## 1. Base del proyecto y configuración
 
 ### Tarea 1.1: Crear proyecto Android en Kotlin con Jetpack Compose
-- [ ] Crear un proyecto nuevo en Android Studio con plantilla de Compose.
-- [ ] Configurar:
-  - [ ] `minSdk`, `targetSdk`.
-  - [ ] Kotlin y Compose en `build.gradle`.
-- [ ] Comprobar que se muestra una pantalla inicial sencilla.
+- [x] Crear un proyecto nuevo en Android Studio con plantilla de Compose.
+- [x] Configurar:
+  - [x] `minSdk`, `targetSdk`.
+  - [x] Kotlin y Compose en `build.gradle`.
+- [x] Comprobar que se muestra una pantalla inicial sencilla.
 
 ### Tarea 1.2: Añadir dependencias básicas
-- [ ] Agregar:
-  - [ ] Jetpack Compose BOM + módulos de UI, material, etc.
-  - [ ] Navigation para Compose.
-  - [ ] Retrofit + OkHttp.
-  - [ ] Biblioteca de serialización (kotlinx.serialization o Moshi).
-  - [ ] (Opcional) Hilt o Koin para DI.
-- [ ] Sincronizar y verificar que el proyecto compila.
+- [x] Agregar:
+  - [x] Jetpack Compose BOM + módulos de UI, material, etc.
+  - [x] Navigation para Compose.
+  - [x] Retrofit + OkHttp.
+  - [x] Biblioteca de serialización (kotlinx.serialization o Moshi).
+  - [x] (Opcional) Hilt o Koin para DI.
+- [x] Sincronizar y verificar que el proyecto compila.
 
 ### Tarea 1.3: Definir estructura de paquetes
-- [ ] Crear paquetes:
-  - [ ] `ui/` (pantallas y componentes Compose).
-  - [ ] `ui.viewmodel/` o `presentation/` (ViewModels).
-  - [ ] `domain/` (modelos y casos de uso).
-  - [ ] `data/` (repositorios y data sources).
-  - [ ] `network/` o dentro de `data/remote` para servicios Retrofit.
+- [x] Crear paquetes:
+  - [x] `ui/` (pantallas y componentes Compose).
+  - [x] `presentation/` (ViewModels).
+  - [x] `domain/` (modelos y casos de uso).
+  - [x] `data/` (repositorios y data sources).
+  - [x] `data/remote` para servicios Retrofit.
 
 ## 2. Modelado de dominio
 
