@@ -68,21 +68,21 @@
   - [x] Devuelva `PosterAnalysisDto` o lance error si algo falla.
 
 ### Tarea 3.4: Mapper DTO → dominio
-- [ ] Crear funciones o clases de mapeo:
-  - [ ] De `PosterAnalysisDto` a `PosterAnalysisResult`.
-  - [ ] Lógica:
-    - [ ] `tipo`:
-      - [ ] `"pelicula"` → `PosterType.PELÍCULA`
-      - [ ] `"serie"` → `PosterType.SERIE`
-      - [ ] otros / null → `PosterType.DESCONOCIDO`
-    - [ ] `plataforma`:
-      - [ ] `"netflix"` → `Platform.NETFLIX`
-      - [ ] `"amazon"` → `Platform.AMAZON`
-      - [ ] `"disney"` → `Platform.DISNEY`
-      - [ ] `"apple"` → `Platform.APPLE`
-      - [ ] otros / null → `Platform.DESCONOCIDA`
-    - [ ] `fecha_estreno`:
-      - [ ] Copiar tal cual a `fechaEstreno` (puede ser null).
+- [x] Crear funciones o clases de mapeo:
+  - [x] De `PosterAnalysisDto` a `PosterAnalysisResult`.
+  - [x] Lógica:
+    - [x] `tipo`:
+      - [x] `"pelicula"` → `PosterType.PELÍCULA`
+      - [x] `"serie"` → `PosterType.SERIE`
+      - [x] otros / null → `PosterType.DESCONOCIDO`
+    - [x] `plataforma`:
+      - [x] `"netflix"` → `Platform.NETFLIX`
+      - [x] `"amazon"` → `Platform.AMAZON`
+      - [x] `"disney"` → `Platform.DISNEY`
+      - [x] `"apple"` → `Platform.APPLE`
+      - [x] otros / null → `Platform.DESCONOCIDA`
+    - [x] `fecha_estreno`:
+      - [x] Copiar tal cual a `fechaEstreno` (puede ser null).
 
 ### Tarea 3.5: Implementar `PosterRepository`
 - [ ] Definir interfaz `PosterRepository`:
