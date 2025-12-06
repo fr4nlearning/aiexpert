@@ -19,12 +19,12 @@
 - [x] Sincronizar y verificar que el proyecto compila.
 
 ### Tarea 1.3: Definir estructura de paquetes
-- [ ] Crear paquetes:
-  - [ ] `ui/` (pantallas y componentes Compose).
-  - [ ] `ui.viewmodel/` o `presentation/` (ViewModels).
-  - [ ] `domain/` (modelos y casos de uso).
-  - [ ] `data/` (repositorios y data sources).
-  - [ ] `network/` o dentro de `data/remote` para servicios Retrofit.
+- [x] Crear paquetes:
+  - [x] `ui/` (pantallas y componentes Compose).
+  - [x] `presentation/` (ViewModels).
+  - [x] `domain/` (modelos y casos de uso).
+  - [x] `data/` (repositorios y data sources).
+  - [x] `data/remote` para servicios Retrofit.
 
 ## 2. Modelado de dominio
 
