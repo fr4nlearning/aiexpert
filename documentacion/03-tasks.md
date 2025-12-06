@@ -85,11 +85,11 @@
       - [x] Copiar tal cual a `fechaEstreno` (puede ser null).
 
 ### Tarea 3.5: Implementar `PosterRepository`
-- [ ] Definir interfaz `PosterRepository`:
-  - [ ] `suspend fun analyzePoster(imageBytes: ByteArray): PosterAnalysisResult`
-- [ ] Crear `PosterRepositoryImpl`:
-  - [ ] Usa `AbacusRemoteDataSource`.
-  - [ ] Gestiona errores básicos (propagación de excepciones).
+- [x] Definir interfaz `PosterRepository`:
+  - [x] `suspend fun analyzePoster(imageBytes: ByteArray): PosterAnalysisResult`
+- [x] Crear `PosterRepositoryImpl`:
+  - [x] Usa `AbacusRemoteDataSource`.
+  - [x] Gestiona errores básicos (propagación de excepciones).
 
 ## 4. Capa de dominio – Implementación del caso de uso
 
