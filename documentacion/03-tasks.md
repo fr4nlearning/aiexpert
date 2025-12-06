@@ -103,11 +103,11 @@
 ## 5. Capa de presentación – ViewModel y estado
 
 ### Tarea 5.1: Definir `PosterUiState`
-- [ ] Campos:
-  - [ ] `selectedImage: ImageData?` (tipo a definir según cómo se manejen las imágenes).
-  - [ ] `isAnalyzing: Boolean`.
-  - [ ] `analysisResult: PosterAnalysisResult?`.
-  - [ ] `errorMessage: String?`.
+- [x] Campos:
+  - [x] `selectedImage: ImageData?` (tipo a definir según cómo se manejen las imágenes).
+  - [x] `isAnalyzing: Boolean`.
+  - [x] `analysisResult: PosterAnalysisResult?`.
+  - [x] `errorMessage: String?`.
 
 ### Tarea 5.2: Implementar `PosterAnalysisViewModel`
 - [ ] Inyectar `AnalyzePosterUseCase`.
