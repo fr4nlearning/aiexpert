@@ -103,28 +103,28 @@
 ## 5. Capa de presentación – ViewModel y estado
 
 ### Tarea 5.1: Definir `PosterUiState`
-- [ ] Campos:
-  - [ ] `selectedImage: ImageData?` (tipo a definir según cómo se manejen las imágenes).
-  - [ ] `isAnalyzing: Boolean`.
-  - [ ] `analysisResult: PosterAnalysisResult?`.
-  - [ ] `errorMessage: String?`.
+- [x] Campos:
+  - [x] `selectedImage: ImageData?` (tipo a definir según cómo se manejen las imágenes).
+  - [x] `isAnalyzing: Boolean`.
+  - [x] `analysisResult: PosterAnalysisResult?`.
+  - [x] `errorMessage: String?`.
 
 ### Tarea 5.2: Implementar `PosterAnalysisViewModel`
-- [ ] Inyectar `AnalyzePosterUseCase`.
-- [ ] Funciones:
-  - [ ] `onImageSelected(image: ImageData)`:
-    - [ ] Actualiza `selectedImage`.
-    - [ ] Limpia `analysisResult` y `errorMessage`.
-  - [ ] `analyzeSelectedImage()`:
-    - [ ] Si no hay imagen, no hace nada o setea un error.
-    - [ ] Cambia `isAnalyzing` a `true`.
-    - [ ] Convierte `ImageData` a `ByteArray`.
-    - [ ] Llama al caso de uso.
-    - [ ] Actualiza:
-      - [ ] `analysisResult` con el valor.
-      - [ ] `errorMessage` si hay fallo.
-    - [ ] Pone `isAnalyzing` a `false`.
-  - [ ] Opcional: `clearError()` para resetear errores.
+- [x] Inyectar `AnalyzePosterUseCase`.
+- [x] Funciones:
+  - [x] `onImageSelected(image: ImageData)`:
+    - [x] Actualiza `selectedImage`.
+    - [x] Limpia `analysisResult` y `errorMessage`.
+  - [x] `analyzeSelectedImage()`:
+    - [x] Si no hay imagen, no hace nada o setea un error.
+    - [x] Cambia `isAnalyzing` a `true`.
+    - [x] Convierte `ImageData` a `ByteArray`.
+    - [x] Llama al caso de uso.
+    - [x] Actualiza:
+      - [x] `analysisResult` con el valor.
+      - [x] `errorMessage` si hay fallo.
+    - [x] Pone `isAnalyzing` a `false`.
+  - [x] Opcional: `clearError()` para resetear errores.
 
 ## 6. Capa de presentación – UI con Compose
 
