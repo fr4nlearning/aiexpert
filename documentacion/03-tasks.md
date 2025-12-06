@@ -54,11 +54,11 @@
   - [x] `fecha_estreno: String?`
 
 ### Tarea 3.2: Definir interfaz Retrofit
-- [ ] Crear `AbacusApiService`:
-  - [ ] Método `analyzePoster(...)` que:
-    - [ ] Reciba imagen y prompt según formato de Abacus.AI.
-    - [ ] Devuelva un tipo de respuesta que contenga el JSON del análisis.
-- [ ] Configurar el `Retrofit` builder (baseUrl genérica que luego se rellenará).
+- [x] Crear `AbacusApiService`:
+  - [x] Método `analyzePoster(...)` que:
+    - [x] Reciba imagen y prompt según formato de Abacus.AI.
+    - [x] Devuelva un tipo de respuesta que contenga el JSON del análisis.
+- [x] Configurar el `Retrofit` builder (baseUrl genérica que luego se rellenará).
 
 ### Tarea 3.3: Implementar `AbacusRemoteDataSource`
 - [ ] Crear clase que:
