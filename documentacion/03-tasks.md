@@ -40,9 +40,9 @@
   - [x] `fechaEstreno: String?` (texto, sin parseo de fecha en esta iteración).
 
 ### Tarea 2.2: Definir caso de uso
-- [ ] Crear `AnalyzePosterUseCase` con:
-  - [ ] `suspend operator fun invoke(imageBytes: ByteArray): Result<PosterAnalysisResult>`
-- [ ] De momento, solo la firma y la clase vacía para integrarla más tarde.
+- [x] Crear `AnalyzePosterUseCase` con:
+  - [x] `suspend operator fun invoke(imageBytes: ByteArray): Result<PosterAnalysisResult>`
+- [x] De momento, solo la firma y la clase vacía para integrarla más tarde.
 
 ## 3. Capa de datos – Abacus.AI
 
