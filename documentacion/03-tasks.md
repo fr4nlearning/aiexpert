@@ -47,11 +47,11 @@
 ## 3. Capa de datos – Abacus.AI
 
 ### Tarea 3.1: DTO de respuesta de la IA
-- [ ] Crear `PosterAnalysisDto` para mapear el JSON de la IA:
-  - [ ] `titulo: String?`
-  - [ ] `tipo: String?`
-  - [ ] `plataforma: String?`
-  - [ ] `fecha_estreno: String?`
+- [x] Crear `PosterAnalysisDto` para mapear el JSON de la IA:
+  - [x] `titulo: String?`
+  - [x] `tipo: String?`
+  - [x] `plataforma: String?`
+  - [x] `fecha_estreno: String?`
 
 ### Tarea 3.2: Definir interfaz Retrofit
 - [ ] Crear `AbacusApiService`:
