@@ -1,17 +1,29 @@
 package com.example.cinescan.domain.usecase
 
+import com.example.cinescan.data.repository.PosterRepository
 import com.example.cinescan.domain.model.PosterAnalysisResult
+import javax.inject.Inject
 
 /**
  * Caso de uso para analizar pósters de películas y series.
- * De momento, solo la firma y la clase vacía para integrarla más tarde.
  */
-class AnalyzePosterUseCase {
+class AnalyzePosterUseCase @Inject constructor(
+    private val repository: PosterRepository
+) {
     
+    /**
+     * Analiza un póster de película o serie.
+     * 
+     * @param imageBytes Bytes de la imagen del póster
+     * @return Result con el análisis del póster o un error
+     */
     suspend operator fun invoke(imageBytes: ByteArray): Result<PosterAnalysisResult> {
-        // TODO: Implementar la lógica de análisis del póster
-        // Esta implementación se completará en tareas posteriores
-        throw NotImplementedError("El caso de uso aún no está implementado")
+        return try {
+            val result = repository.analyzePoster(imageBytes)
+            Result.success(result)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
     }
 }
 
