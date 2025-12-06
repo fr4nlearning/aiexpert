@@ -61,11 +61,11 @@
 - [x] Configurar el `Retrofit` builder (baseUrl genérica que luego se rellenará).
 
 ### Tarea 3.3: Implementar `AbacusRemoteDataSource`
-- [ ] Crear clase que:
-  - [ ] Reciba `AbacusApiService`.
-  - [ ] Prepare la petición (imagen en base64/multipart + prompt).
-  - [ ] Llame al endpoint de Abacus.AI.
-  - [ ] Devuelva `PosterAnalysisDto` o lance error si algo falla.
+- [x] Crear clase que:
+  - [x] Reciba `AbacusApiService`.
+  - [x] Prepare la petición (imagen en base64/multipart + prompt).
+  - [x] Llame al endpoint de Abacus.AI.
+  - [x] Devuelva `PosterAnalysisDto` o lance error si algo falla.
 
 ### Tarea 3.4: Mapper DTO → dominio
 - [ ] Crear funciones o clases de mapeo:
