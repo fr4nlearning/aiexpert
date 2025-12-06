@@ -29,20 +29,20 @@
 ## 2. Modelado de dominio
 
 ### Tarea 2.1: Crear enums y modelos de dominio
-- [ ] Crear `PosterType`:
-  - [ ] Valores: `PELÍCULA`, `SERIE`, `DESCONOCIDO`.
-- [ ] Crear `Platform`:
-  - [ ] Valores: `NETFLIX`, `AMAZON`, `DISNEY`, `APPLE`, `DESCONOCIDA`.
-- [ ] Crear `PosterAnalysisResult` con:
-  - [ ] `titulo: String?`
-  - [ ] `tipo: PosterType`
-  - [ ] `plataforma: Platform`
-  - [ ] `fechaEstreno: String?` (texto, sin parseo de fecha en esta iteración).
+- [x] Crear `PosterType`:
+  - [x] Valores: `PELÍCULA`, `SERIE`, `DESCONOCIDO`.
+- [x] Crear `Platform`:
+  - [x] Valores: `NETFLIX`, `AMAZON`, `DISNEY`, `APPLE`, `DESCONOCIDA`.
+- [x] Crear `PosterAnalysisResult` con:
+  - [x] `titulo: String?`
+  - [x] `tipo: PosterType`
+  - [x] `plataforma: Platform`
+  - [x] `fechaEstreno: String?` (texto, sin parseo de fecha en esta iteración).
 
 ### Tarea 2.2: Definir caso de uso
-- [ ] Crear `AnalyzePosterUseCase` con:
-  - [ ] `suspend operator fun invoke(imageBytes: ByteArray): Result<PosterAnalysisResult>`
-- [ ] De momento, solo la firma y la clase vacía para integrarla más tarde.
+- [x] Crear `AnalyzePosterUseCase` con:
+  - [x] `suspend operator fun invoke(imageBytes: ByteArray): Result<PosterAnalysisResult>`
+- [x] De momento, solo la firma y la clase vacía para integrarla más tarde.
 
 ## 3. Capa de datos – Abacus.AI
 
