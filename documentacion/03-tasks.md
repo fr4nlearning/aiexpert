@@ -129,41 +129,41 @@
 ## 6. Capa de presentación – UI con Compose
 
 ### Tarea 6.1: Configurar navegación con `NavHost`
-- [ ] Crear un `NavHost` con:
-  - [ ] Ruta `home`.
-  - [ ] Ruta `preview`.
-  - [ ] Ruta `result`.
-- [ ] Gestionar paso de datos (por ejemplo, id/referencia de la imagen en el ViewModel en lugar de pasarla en los argumentos).
+- [x] Crear un `NavHost` con:
+  - [x] Ruta `home`.
+  - [x] Ruta `preview`.
+  - [x] Ruta `result`.
+- [x] Gestionar paso de datos (por ejemplo, id/referencia de la imagen en el ViewModel en lugar de pasarla en los argumentos).
 
 ### Tarea 6.2: Implementar `HomeScreen`
-- [ ] Contenido:
-  - [ ] Botón "Tomar foto".
-  - [ ] Botón "Elegir de galería".
-- [ ] Comportamiento:
-  - [ ] Manejar permisos de cámara/almacenamiento.
-  - [ ] Al seleccionar una imagen:
-    - [ ] Llamar a `viewModel.onImageSelected(...)`.
-    - [ ] Navegar a `preview`.
+- [x] Contenido:
+  - [x] Botón "Tomar foto".
+  - [x] Botón "Elegir de galería".
+- [x] Comportamiento:
+  - [x] Manejar permisos de cámara/almacenamiento.
+  - [x] Al seleccionar una imagen:
+    - [x] Llamar a `viewModel.onImageSelected(...)`.
+    - [x] Navegar a `preview`.
 
 ### Tarea 6.3: Implementar `PreviewScreen`
-- [ ] Contenido:
-  - [ ] Muestra la imagen seleccionada desde el estado del ViewModel.
-  - [ ] Botón "Analizar".
-- [ ] Comportamiento:
-  - [ ] Al pulsar "Analizar":
-    - [ ] Llamar a `viewModel.analyzeSelectedImage()`.
-    - [ ] Mostrar indicador de carga si `isAnalyzing` es `true`.
-    - [ ] Cuando haya `analysisResult` o `errorMessage`, navegar a `result`.
+- [x] Contenido:
+  - [x] Muestra la imagen seleccionada desde el estado del ViewModel.
+  - [x] Botón "Analizar".
+- [x] Comportamiento:
+  - [x] Al pulsar "Analizar":
+    - [x] Llamar a `viewModel.analyzeSelectedImage()`.
+    - [x] Mostrar indicador de carga si `isAnalyzing` es `true`.
+    - [x] Cuando haya `analysisResult` o `errorMessage`, navegar a `result`.
 
 ### Tarea 6.4: Implementar `ResultScreen`
-- [ ] Contenido:
-  - [ ] Muestra:
-    - [ ] Imagen (reutilizada desde el ViewModel).
-    - [ ] Título, tipo, plataforma y fecha de estreno.
-  - [ ] Si `errorMessage` no es null:
-    - [ ] Mostrar el mensaje de error y un botón "Intentar de nuevo" o "Volver".
-- [ ] Comportamiento:
-  - [ ] Botón "Nuevo análisis" para volver a `home`.
+- [x] Contenido:
+  - [x] Muestra:
+    - [x] Imagen (reutilizada desde el ViewModel).
+    - [x] Título, tipo, plataforma y fecha de estreno.
+  - [x] Si `errorMessage` no es null:
+    - [x] Mostrar el mensaje de error y un botón "Intentar de nuevo" o "Volver".
+- [x] Comportamiento:
+  - [x] Botón "Nuevo análisis" para volver a `home`.
 
 ## 7. Manejo de errores y UX básica
 
