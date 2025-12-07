@@ -129,11 +129,11 @@
 ## 6. Capa de presentación – UI con Compose
 
 ### Tarea 6.1: Configurar navegación con `NavHost`
-- [ ] Crear un `NavHost` con:
-  - [ ] Ruta `home`.
-  - [ ] Ruta `preview`.
-  - [ ] Ruta `result`.
-- [ ] Gestionar paso de datos (por ejemplo, id/referencia de la imagen en el ViewModel en lugar de pasarla en los argumentos).
+- [x] Crear un `NavHost` con:
+  - [x] Ruta `home`.
+  - [x] Ruta `preview`.
+  - [x] Ruta `result`.
+- [x] Gestionar paso de datos (por ejemplo, id/referencia de la imagen en el ViewModel en lugar de pasarla en los argumentos).
 
 ### Tarea 6.2: Implementar `HomeScreen`
 - [ ] Contenido:

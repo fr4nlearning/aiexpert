@@ -1,9 +1,11 @@
 package com.example.cinescan.data.repository.di
 
+import com.example.cinescan.data.remote.mapper.PosterAnalysisMapper
 import com.example.cinescan.data.repository.PosterRepository
 import com.example.cinescan.data.repository.PosterRepositoryImpl
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
@@ -23,5 +25,14 @@ abstract class RepositoryModule {
     abstract fun bindPosterRepository(
         impl: PosterRepositoryImpl
     ): PosterRepository
+    
+    companion object {
+        /**
+         * Proporciona la instancia del mapper.
+         */
+        @Provides
+        @Singleton
+        fun providePosterAnalysisMapper(): PosterAnalysisMapper = PosterAnalysisMapper
+    }
 }
 
