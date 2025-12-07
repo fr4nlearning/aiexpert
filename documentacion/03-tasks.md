@@ -146,14 +146,14 @@
     - [x] Navegar a `preview`.
 
 ### Tarea 6.3: Implementar `PreviewScreen`
-- [ ] Contenido:
-  - [ ] Muestra la imagen seleccionada desde el estado del ViewModel.
-  - [ ] Botón "Analizar".
-- [ ] Comportamiento:
-  - [ ] Al pulsar "Analizar":
-    - [ ] Llamar a `viewModel.analyzeSelectedImage()`.
-    - [ ] Mostrar indicador de carga si `isAnalyzing` es `true`.
-    - [ ] Cuando haya `analysisResult` o `errorMessage`, navegar a `result`.
+- [x] Contenido:
+  - [x] Muestra la imagen seleccionada desde el estado del ViewModel.
+  - [x] Botón "Analizar".
+- [x] Comportamiento:
+  - [x] Al pulsar "Analizar":
+    - [x] Llamar a `viewModel.analyzeSelectedImage()`.
+    - [x] Mostrar indicador de carga si `isAnalyzing` es `true`.
+    - [x] Cuando haya `analysisResult` o `errorMessage`, navegar a `result`.
 
 ### Tarea 6.4: Implementar `ResultScreen`
 - [ ] Contenido:
