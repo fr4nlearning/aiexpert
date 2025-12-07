@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.cinescan.R
 import com.example.cinescan.domain.usecase.AnalyzePosterUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -12,6 +13,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.io.IOException
+import java.net.SocketTimeoutException
+import java.net.UnknownHostException
+import kotlinx.serialization.SerializationException
 import javax.inject.Inject
 
 /**
@@ -48,7 +53,9 @@ class PosterAnalysisViewModel @Inject constructor(
         val currentImage = _uiState.value.selectedImage
         
         if (currentImage == null) {
-            _uiState.update { it.copy(errorMessage = "No hay imagen seleccionada") }
+            _uiState.update { 
+                it.copy(errorMessage = context.getString(R.string.error_no_image_selected)) 
+            }
             return
         }
 
@@ -62,7 +69,7 @@ class PosterAnalysisViewModel @Inject constructor(
                     _uiState.update { 
                         it.copy(
                             isAnalyzing = false,
-                            errorMessage = "Error al leer la imagen"
+                            errorMessage = context.getString(R.string.error_image_read)
                         )
                     }
                     return@launch
@@ -79,20 +86,47 @@ class PosterAnalysisViewModel @Inject constructor(
                         )
                     }
                 }.onFailure { exception ->
+                    val errorMessage = getErrorMessage(exception)
                     _uiState.update { 
                         it.copy(
                             isAnalyzing = false,
-                            errorMessage = exception.message ?: "Error desconocido al analizar el póster"
+                            errorMessage = errorMessage
                         )
                     }
                 }
 
             } catch (e: Exception) {
+                val errorMessage = getErrorMessage(e)
                 _uiState.update { 
                     it.copy(
                         isAnalyzing = false,
-                        errorMessage = e.message ?: "Error inesperado"
+                        errorMessage = errorMessage
                     )
+                }
+            }
+        }
+    }
+    
+    /**
+     * Obtiene el mensaje de error apropiado según el tipo de excepción.
+     */
+    private fun getErrorMessage(exception: Throwable): String {
+        return when (exception) {
+            is UnknownHostException,
+            is SocketTimeoutException,
+            is IOException -> {
+                context.getString(R.string.error_network)
+            }
+            is SerializationException -> {
+                context.getString(R.string.error_ai_response)
+            }
+            else -> {
+                // Si el mensaje contiene palabras clave relacionadas con permisos
+                val message = exception.message?.lowercase() ?: ""
+                if (message.contains("permission") || message.contains("permiso")) {
+                    context.getString(R.string.error_permissions_denied)
+                } else {
+                    context.getString(R.string.error_unknown)
                 }
             }
         }

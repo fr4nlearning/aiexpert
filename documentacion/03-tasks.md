@@ -168,14 +168,14 @@
 ## 7. Manejo de errores y UX básica
 
 ### Tarea 7.1: Mensajes de error
-- [ ] Definir algunos mensajes en `strings.xml`:
-  - [ ] Error de red.
-  - [ ] Error al interpretar la respuesta de la IA.
-  - [ ] Permisos denegados.
-- [ ] Mostrar los mensajes desde la UI usando `errorMessage` del estado.
+- [x] Definir algunos mensajes en `strings.xml`:
+  - [x] Error de red.
+  - [x] Error al interpretar la respuesta de la IA.
+  - [x] Permisos denegados.
+- [x] Mostrar los mensajes desde la UI usando `errorMessage` del estado.
 
 ### Tarea 7.2: Indicadores de carga
-- [ ] Añadir un componente de loading (spinner) cuando `isAnalyzing` sea `true`, tanto en `PreviewScreen` como en `ResultScreen` si se decide.
+- [x] Añadir un componente de loading (spinner) cuando `isAnalyzing` sea `true`, tanto en `PreviewScreen` como en `ResultScreen` si se decide.
 
 ## 8. Configuración de API Key y entorno
 
