@@ -136,14 +136,14 @@
 - [x] Gestionar paso de datos (por ejemplo, id/referencia de la imagen en el ViewModel en lugar de pasarla en los argumentos).
 
 ### Tarea 6.2: Implementar `HomeScreen`
-- [ ] Contenido:
-  - [ ] Botón "Tomar foto".
-  - [ ] Botón "Elegir de galería".
-- [ ] Comportamiento:
-  - [ ] Manejar permisos de cámara/almacenamiento.
-  - [ ] Al seleccionar una imagen:
-    - [ ] Llamar a `viewModel.onImageSelected(...)`.
-    - [ ] Navegar a `preview`.
+- [x] Contenido:
+  - [x] Botón "Tomar foto".
+  - [x] Botón "Elegir de galería".
+- [x] Comportamiento:
+  - [x] Manejar permisos de cámara/almacenamiento.
+  - [x] Al seleccionar una imagen:
+    - [x] Llamar a `viewModel.onImageSelected(...)`.
+    - [x] Navegar a `preview`.
 
 ### Tarea 6.3: Implementar `PreviewScreen`
 - [ ] Contenido:
