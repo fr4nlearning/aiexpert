@@ -184,8 +184,8 @@
 - [x] Usar `BuildConfig` o mecanismo similar para leerla desde el código.
 
 ### Tarea 8.2: Parámetros de red
-- [ ] Configurar timeouts en OkHttp.
-- [ ] Opcional: logging interceptor en modo debug para depurar las llamadas.
+- [x] Configurar timeouts en OkHttp.
+- [x] Opcional: logging interceptor en modo debug para depurar las llamadas.
 
 ---
 
