@@ -175,7 +175,7 @@
 - [x] Mostrar los mensajes desde la UI usando `errorMessage` del estado.
 
 ### Tarea 7.2: Indicadores de carga
-- [ ] Añadir un componente de loading (spinner) cuando `isAnalyzing` sea `true`, tanto en `PreviewScreen` como en `ResultScreen` si se decide.
+- [x] Añadir un componente de loading (spinner) cuando `isAnalyzing` sea `true`, tanto en `PreviewScreen` como en `ResultScreen` si se decide.
 
 ## 8. Configuración de API Key y entorno
 

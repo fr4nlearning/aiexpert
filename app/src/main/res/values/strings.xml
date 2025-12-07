@@ -8,4 +8,8 @@
     <string name="error_unknown">Ha ocurrido un error inesperado. Por favor, intenta de nuevo.</string>
     <string name="error_no_image_selected">No hay imagen seleccionada. Por favor, selecciona una imagen primero.</string>
     <string name="error_image_read">Error al leer la imagen. Por favor, intenta con otra imagen.</string>
+    
+    <!-- Mensajes de carga -->
+    <string name="loading_analyzing">Analizando póster…</string>
+    <string name="loading_please_wait">Por favor, espera mientras la IA analiza la imagen</string>
 </resources>
