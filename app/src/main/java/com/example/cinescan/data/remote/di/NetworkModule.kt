@@ -1,6 +1,8 @@
 package com.example.cinescan.data.remote.di
 
+import com.example.cinescan.BuildConfig
 import com.example.cinescan.data.remote.AbacusApiService
+import com.example.cinescan.data.remote.ApiKeyInterceptor
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides
@@ -34,20 +36,28 @@ object NetworkModule {
     
     /**
      * Proporciona una instancia de OkHttpClient con logging interceptor.
+     * El logging solo está habilitado en modo debug.
      */
     @Provides
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {
-        val loggingInterceptor = HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
-        }
-        
-        return OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
+        val builder = OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
-            .build()
+        
+        // Añadir interceptor de API Key
+        builder.addInterceptor(ApiKeyInterceptor())
+        
+        // Añadir logging interceptor solo en modo debug
+        if (BuildConfig.DEBUG_MODE) {
+            val loggingInterceptor = HttpLoggingInterceptor().apply {
+                level = HttpLoggingInterceptor.Level.BODY
+            }
+            builder.addInterceptor(loggingInterceptor)
+        }
+        
+        return builder.build()
     }
     
     /**
