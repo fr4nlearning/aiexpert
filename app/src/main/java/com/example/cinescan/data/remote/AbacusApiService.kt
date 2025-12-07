@@ -1,29 +1,24 @@
 package com.example.cinescan.data.remote
 
-import com.example.cinescan.data.remote.dto.PosterAnalysisDto
-import okhttp3.MultipartBody
-import okhttp3.RequestBody
-import retrofit2.http.Multipart
+import com.example.cinescan.data.remote.dto.OpenAIRequestDto
+import com.example.cinescan.data.remote.dto.OpenAIResponseDto
+import retrofit2.http.Body
 import retrofit2.http.POST
-import retrofit2.http.Part
 
 /**
- * Interfaz de Retrofit para comunicarse con Abacus.AI.
+ * Interfaz de Retrofit para comunicarse con Abacus.AI usando formato OpenAI.
  */
 interface AbacusApiService {
     
     /**
-     * Analiza un póster de película o serie.
+     * Analiza un póster de película o serie usando visión AI.
      * 
-     * @param image Imagen del póster en formato multipart
-     * @param prompt Prompt para la IA con instrucciones de análisis
-     * @return DTO con el resultado del análisis
+     * @param request Petición en formato OpenAI con imagen y prompt
+     * @return Respuesta de la IA con el análisis
      */
-    @Multipart
-    @POST("analyze")
+    @POST("chat/completions")
     suspend fun analyzePoster(
-        @Part image: MultipartBody.Part,
-        @Part("prompt") prompt: RequestBody
-    ): PosterAnalysisDto
+        @Body request: OpenAIRequestDto
+    ): OpenAIResponseDto
 }
 

@@ -73,7 +73,7 @@ object NetworkModule {
         val contentType = "application/json".toMediaType()
         
         return Retrofit.Builder()
-            .baseUrl("https://api.abacus.ai/") // URL genérica, se configurará más adelante
+            .baseUrl("https://routellm.abacus.ai/v1/")
             .client(okHttpClient)
             .addConverterFactory(json.asConverterFactory(contentType))
             .build()
