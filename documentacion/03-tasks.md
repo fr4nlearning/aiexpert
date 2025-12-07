@@ -156,14 +156,14 @@
     - [x] Cuando haya `analysisResult` o `errorMessage`, navegar a `result`.
 
 ### Tarea 6.4: Implementar `ResultScreen`
-- [ ] Contenido:
-  - [ ] Muestra:
-    - [ ] Imagen (reutilizada desde el ViewModel).
-    - [ ] Título, tipo, plataforma y fecha de estreno.
-  - [ ] Si `errorMessage` no es null:
-    - [ ] Mostrar el mensaje de error y un botón "Intentar de nuevo" o "Volver".
-- [ ] Comportamiento:
-  - [ ] Botón "Nuevo análisis" para volver a `home`.
+- [x] Contenido:
+  - [x] Muestra:
+    - [x] Imagen (reutilizada desde el ViewModel).
+    - [x] Título, tipo, plataforma y fecha de estreno.
+  - [x] Si `errorMessage` no es null:
+    - [x] Mostrar el mensaje de error y un botón "Intentar de nuevo" o "Volver".
+- [x] Comportamiento:
+  - [x] Botón "Nuevo análisis" para volver a `home`.
 
 ## 7. Manejo de errores y UX básica
 
