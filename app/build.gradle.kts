@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -21,10 +24,25 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Leer API Key desde local.properties
+        val localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            val properties = Properties()
+            properties.load(FileInputStream(localPropertiesFile))
+            val abacusApiKey = properties.getProperty("ABACUS_API_KEY") ?: ""
+            buildConfigField("String", "ABACUS_API_KEY", "\"$abacusApiKey\"")
+        } else {
+            buildConfigField("String", "ABACUS_API_KEY", "\"\"")
+        }
     }
 
     buildTypes {
+        debug {
+            buildConfigField("Boolean", "DEBUG_MODE", "true")
+        }
         release {
+            buildConfigField("Boolean", "DEBUG_MODE", "false")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -41,6 +59,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 

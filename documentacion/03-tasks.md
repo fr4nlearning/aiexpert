@@ -180,8 +180,8 @@
 ## 8. Configuración de API Key y entorno
 
 ### Tarea 8.1: Gestión segura de la API Key de Abacus.AI
-- [ ] Añadir la API key en un lugar adecuado (por ejemplo `local.properties` + `BuildConfig`) evitando subirla al control de versiones.
-- [ ] Usar `BuildConfig` o mecanismo similar para leerla desde el código.
+- [x] Añadir la API key en un lugar adecuado (por ejemplo `local.properties` + `BuildConfig`) evitando subirla al control de versiones.
+- [x] Usar `BuildConfig` o mecanismo similar para leerla desde el código.
 
 ### Tarea 8.2: Parámetros de red
 - [ ] Configurar timeouts en OkHttp.
