@@ -1,19 +1,27 @@
 package com.example.cinescan.data.remote
 
+import android.util.Base64
+import com.example.cinescan.data.remote.dto.ContentDto
+import com.example.cinescan.data.remote.dto.ImageUrlDto
+import com.example.cinescan.data.remote.dto.MessageDto
+import com.example.cinescan.data.remote.dto.OpenAIRequestDto
 import com.example.cinescan.data.remote.dto.PosterAnalysisDto
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.toRequestBody
+import kotlinx.serialization.json.Json
 import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Data source remoto para comunicarse con Abacus.AI.
+ * Data source remoto para comunicarse con Abacus.AI usando formato OpenAI.
  */
 @Singleton
 class AbacusRemoteDataSource @Inject constructor(
     private val apiService: AbacusApiService
 ) {
+    
+    private val json = Json {
+        ignoreUnknownKeys = true
+        isLenient = true
+    }
     
     /**
      * Analiza un póster de película o serie usando Abacus.AI.
@@ -24,15 +32,9 @@ class AbacusRemoteDataSource @Inject constructor(
      */
     suspend fun analyzePoster(imageBytes: ByteArray): PosterAnalysisDto {
         try {
-            // Preparar la imagen como multipart
-            val requestBody = imageBytes.toRequestBody(
-                contentType = "image/*".toMediaTypeOrNull()
-            )
-            val imagePart = MultipartBody.Part.createFormData(
-                name = "image",
-                filename = "poster.jpg",
-                body = requestBody
-            )
+            // Convertir la imagen a base64
+            val base64Image = Base64.encodeToString(imageBytes, Base64.NO_WRAP)
+            val imageDataUrl = "data:image/jpeg;base64,$base64Image"
             
             // Preparar el prompt para la IA
             val promptText = """
@@ -46,7 +48,7 @@ class AbacusRemoteDataSource @Inject constructor(
                 
                 -- dia mes
                 
-                el mes puede venir en inges o español, o con algun tipo de abreviatura
+                el mes puede venir en inglés o español, o con algún tipo de abreviatura
                 
                 - analiza la plataforma si la hubiera: netflix, amazon, apple, disney
                 
@@ -63,13 +65,41 @@ class AbacusRemoteDataSource @Inject constructor(
                 No añadas texto antes ni después del JSON. Solo el JSON.
             """.trimIndent()
             
-            val promptBody = promptText.toRequestBody("text/plain".toMediaTypeOrNull())
+            // Crear la petición en formato OpenAI
+            val request = OpenAIRequestDto(
+                model = "gpt-4o",
+                messages = listOf(
+                    MessageDto(
+                        role = "user",
+                        content = listOf(
+                            ContentDto(type = "text", text = promptText),
+                            ContentDto(
+                                type = "image_url",
+                                image_url = ImageUrlDto(url = imageDataUrl)
+                            )
+                        )
+                    )
+                ),
+                max_tokens = 500
+            )
             
             // Llamar al endpoint de Abacus.AI
-            return apiService.analyzePoster(
-                image = imagePart,
-                prompt = promptBody
-            )
+            val response = apiService.analyzePoster(request)
+            
+            // Extraer el contenido JSON de la respuesta
+            val content = response.choices.firstOrNull()?.message?.content
+                ?: throw Exception("No se recibió respuesta de la IA")
+            
+            // Limpiar el contenido de posibles bloques de código markdown
+            val cleanedContent = content
+                .trim()
+                .removePrefix("```json")
+                .removePrefix("```")
+                .removeSuffix("```")
+                .trim()
+            
+            // Parsear el JSON de la respuesta
+            return json.decodeFromString<PosterAnalysisDto>(cleanedContent)
             
         } catch (e: Exception) {
             // Propagar el error para que sea manejado por capas superiores
