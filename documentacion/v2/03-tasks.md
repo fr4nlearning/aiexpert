@@ -11,12 +11,12 @@
   - [x] El flujo de análisis existente sigue funcionando correctamente.
 
 ### Tarea 1.2: Preparar entorno de tests unitarios
-- [ ] Confirmar que existe un directorio de tests locales (por ejemplo, app/src/test/...).
-- [ ] Añadir y/o revisar dependencias necesarias para:
-  - [ ] Framework de tests unitarios.
-  - [ ] Librería de mocks.
-  - [ ] Soporte para corrutinas en tests.
-- [ ] Verificar que se puede ejecutar al menos un test “dummy” para validar la configuración.
+- [x] Confirmar que existe un directorio de tests locales (por ejemplo, app/src/test/...).
+- [x] Añadir y/o revisar dependencias necesarias para:
+  - [x] Framework de tests unitarios.
+  - [x] Librería de mocks.
+  - [x] Soporte para corrutinas en tests.
+- [x] Verificar que se puede ejecutar al menos un test "dummy" para validar la configuración.
 
 ---
 
