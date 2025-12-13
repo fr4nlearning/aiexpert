@@ -3,12 +3,12 @@
 ## 1. Base del proyecto y configuración
 
 ### Tarea 1.1: Revisar y confirmar configuración de Android
-- [ ] Verificar en el archivo de configuración del módulo app:
-  - [ ] minSdk = 26.
-  - [ ] targetSdk = 36.
-  - [ ] compileSdk = 36.
-- [ ] Ejecutar la app actual y comprobar que:
-  - [ ] El flujo de análisis existente sigue funcionando correctamente.
+- [x] Verificar en el archivo de configuración del módulo app:
+  - [x] minSdk = 26.
+  - [x] targetSdk = 36.
+  - [x] compileSdk = 36.
+- [x] Ejecutar la app actual y comprobar que:
+  - [x] El flujo de análisis existente sigue funcionando correctamente.
 
 ### Tarea 1.2: Preparar entorno de tests unitarios
 - [ ] Confirmar que existe un directorio de tests locales (por ejemplo, app/src/test/...).
