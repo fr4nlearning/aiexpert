@@ -33,17 +33,17 @@
   - [x] Verifiquen que el modelo de dominio resultante contiene los valores esperados.
 
 ### Tarea 2.2: Tests del flujo principal de análisis
-- [ ] Identificar el caso de uso o función principal que:
-  - [ ] Recibe una imagen.
-  - [ ] Llama a la IA.
-  - [ ] Devuelve un resultado de análisis o un error.
-- [ ] Diseñar casos de prueba para:
-  - [ ] Llamada a la IA con éxito (respuesta válida).
-  - [ ] Error de red o excepción.
-  - [ ] Respuesta inválida/parcial.
-- [ ] Implementar tests que:
-  - [ ] Simulen comportamientos de la dependencia de red.
-  - [ ] Verifiquen que la salida del caso de uso coincide con lo esperado en cada caso.
+- [x] Identificar el caso de uso o función principal que:
+  - [x] Recibe una imagen.
+  - [x] Llama a la IA.
+  - [x] Devuelve un resultado de análisis o un error.
+- [x] Diseñar casos de prueba para:
+  - [x] Llamada a la IA con éxito (respuesta válida).
+  - [x] Error de red o excepción.
+  - [x] Respuesta inválida/parcial.
+- [x] Implementar tests que:
+  - [x] Simulen comportamientos de la dependencia de red.
+  - [x] Verifiquen que la salida del caso de uso coincide con lo esperado en cada caso.
 
 ### Tarea 2.3: Tests de ViewModel (opcional)
 - [ ] Identificar el ViewModel responsable del análisis.
