@@ -23,38 +23,40 @@
 ## 2. Tests unitarios sobre lógica actual
 
 ### Tarea 2.1: Tests de mapeo de respuesta de IA a modelo interno
-- [ ] Identificar la función o componente que transforma la respuesta de la IA en el modelo de dominio usado por la app.
-- [ ] Diseñar casos de prueba para:
-  - [ ] Diferentes tipos de contenido (película, serie, desconocido).
-  - [ ] Diferentes plataformas (Ej.: Netflix, otra conocida, desconocida).
-  - [ ] Distintas combinaciones de campos presentes/ausentes.
-- [ ] Implementar tests que:
-  - [ ] Creen respuestas de ejemplo de la IA.
-  - [ ] Verifiquen que el modelo de dominio resultante contiene los valores esperados.
+- [x] Identificar la función o componente que transforma la respuesta de la IA en el modelo de dominio usado por la app.
+- [x] Diseñar casos de prueba para:
+  - [x] Diferentes tipos de contenido (película, serie, desconocido).
+  - [x] Diferentes plataformas (Ej.: Netflix, otra conocida, desconocida).
+  - [x] Distintas combinaciones de campos presentes/ausentes.
+- [x] Implementar tests que:
+  - [x] Creen respuestas de ejemplo de la IA.
+  - [x] Verifiquen que el modelo de dominio resultante contiene los valores esperados.
 
 ### Tarea 2.2: Tests del flujo principal de análisis
-- [ ] Identificar el caso de uso o función principal que:
-  - [ ] Recibe una imagen.
-  - [ ] Llama a la IA.
-  - [ ] Devuelve un resultado de análisis o un error.
-- [ ] Diseñar casos de prueba para:
-  - [ ] Llamada a la IA con éxito (respuesta válida).
-  - [ ] Error de red o excepción.
-  - [ ] Respuesta inválida/parcial.
-- [ ] Implementar tests que:
-  - [ ] Simulen comportamientos de la dependencia de red.
-  - [ ] Verifiquen que la salida del caso de uso coincide con lo esperado en cada caso.
+- [x] Identificar el caso de uso o función principal que:
+  - [x] Recibe una imagen.
+  - [x] Llama a la IA.
+  - [x] Devuelve un resultado de análisis o un error.
+- [x] Diseñar casos de prueba para:
+  - [x] Llamada a la IA con éxito (respuesta válida).
+  - [x] Error de red o excepción.
+  - [x] Respuesta inválida/parcial.
+- [x] Implementar tests que:
+  - [x] Simulen comportamientos de la dependencia de red.
+  - [x] Verifiquen que la salida del caso de uso coincide con lo esperado en cada caso.
 
-### Tarea 2.3: Tests de ViewModel (opcional)
-- [ ] Identificar el ViewModel responsable del análisis.
-- [ ] Diseñar casos para:
-  - [ ] Estado inicial (sin análisis).
-  - [ ] Estado durante el análisis (cargando).
-  - [ ] Estado final de éxito (mostrar resultado).
-  - [ ] Estado final de error (mostrar mensaje).
-- [ ] Implementar tests que:
-  - [ ] Simulen la ejecución del caso de uso.
-  - [ ] Verifiquen transiciones de estados y valores expuestos a la UI.
+### Tarea 2.3: Tests de ViewModel (no aplicable - fuera del scope)
+**Nota**: Esta tarea no se incluye en este apartado ya que los tests de ViewModel requieren componentes de Android (Context, Application, etc.) y no son tests unitarios puros. Serían tests instrumentados o de integración, que quedan fuera del alcance de este apartado enfocado en tests unitarios puros.
+
+- [ ] ~~Identificar el ViewModel responsable del análisis.~~
+- [ ] ~~Diseñar casos para:~~
+  - [ ] ~~Estado inicial (sin análisis).~~
+  - [ ] ~~Estado durante el análisis (cargando).~~
+  - [ ] ~~Estado final de éxito (mostrar resultado).~~
+  - [ ] ~~Estado final de error (mostrar mensaje).~~
+- [ ] ~~Implementar tests que:~~
+  - [ ] ~~Simulen la ejecución del caso de uso.~~
+  - [ ] ~~Verifiquen transiciones de estados y valores expuestos a la UI.~~
 
 ---
 
