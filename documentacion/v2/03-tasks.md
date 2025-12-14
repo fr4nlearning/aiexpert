@@ -45,16 +45,18 @@
   - [x] Simulen comportamientos de la dependencia de red.
   - [x] Verifiquen que la salida del caso de uso coincide con lo esperado en cada caso.
 
-### Tarea 2.3: Tests de ViewModel (opcional)
-- [ ] Identificar el ViewModel responsable del análisis.
-- [ ] Diseñar casos para:
-  - [ ] Estado inicial (sin análisis).
-  - [ ] Estado durante el análisis (cargando).
-  - [ ] Estado final de éxito (mostrar resultado).
-  - [ ] Estado final de error (mostrar mensaje).
-- [ ] Implementar tests que:
-  - [ ] Simulen la ejecución del caso de uso.
-  - [ ] Verifiquen transiciones de estados y valores expuestos a la UI.
+### Tarea 2.3: Tests de ViewModel (no aplicable - fuera del scope)
+**Nota**: Esta tarea no se incluye en este apartado ya que los tests de ViewModel requieren componentes de Android (Context, Application, etc.) y no son tests unitarios puros. Serían tests instrumentados o de integración, que quedan fuera del alcance de este apartado enfocado en tests unitarios puros.
+
+- [ ] ~~Identificar el ViewModel responsable del análisis.~~
+- [ ] ~~Diseñar casos para:~~
+  - [ ] ~~Estado inicial (sin análisis).~~
+  - [ ] ~~Estado durante el análisis (cargando).~~
+  - [ ] ~~Estado final de éxito (mostrar resultado).~~
+  - [ ] ~~Estado final de error (mostrar mensaje).~~
+- [ ] ~~Implementar tests que:~~
+  - [ ] ~~Simulen la ejecución del caso de uso.~~
+  - [ ] ~~Verifiquen transiciones de estados y valores expuestos a la UI.~~
 
 ---
 
