@@ -84,11 +84,11 @@
   - [x] Flujos reactivos (por ejemplo, actualizaciones en tiempo real para el historial).
 
 ### Tarea 3.3: Integrar el guardado en el flujo de análisis
-- [ ] Modificar el flujo de análisis existente para que:
-  - [ ] Tras un resultado exitoso, transforme el modelo de dominio en el modelo de almacenamiento.
-  - [ ] Llame a la interfaz de acceso local para guardar el registro.
-- [ ] Asegurarse de que:
-  - [ ] Los errores de guardado local no bloquean completamente el uso de la app, pero quedan registrados para diagnóstico (si aplica).
+- [x] Modificar el flujo de análisis existente para que:
+  - [x] Tras un resultado exitoso, transforme el modelo de dominio en el modelo de almacenamiento.
+  - [x] Llame a la interfaz de acceso local para guardar el registro.
+- [x] Asegurarse de que:
+  - [x] Los errores de guardado local no bloquean completamente el uso de la app, pero quedan registrados para diagnóstico (si aplica).
 
 ### Tarea 3.4: Preparar datos para la pantalla de historial
 - [ ] Definir una representación amigable para la UI del historial:
