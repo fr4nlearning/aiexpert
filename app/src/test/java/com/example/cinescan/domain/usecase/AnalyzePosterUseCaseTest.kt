@@ -22,7 +22,8 @@ class AnalyzePosterUseCaseTest {
             titulo = "Duna",
             tipo = PosterType.PELÍCULA,
             plataforma = Platform.NETFLIX,
-            fechaEstreno = "2025-10-01"
+            fechaEstreno = "2025-10-01",
+            fechaEstrenoTimestamp = null
         )
         val posterRepository = FakePosterRepository { expectedResult }
         val analysisRepository = FakeAnalysisRepository()
@@ -71,7 +72,8 @@ class AnalyzePosterUseCaseTest {
             titulo = "Duna",
             tipo = PosterType.PELÍCULA,
             plataforma = Platform.NETFLIX,
-            fechaEstreno = "2025-10-01"
+            fechaEstreno = "2025-10-01",
+            fechaEstrenoTimestamp = null
         )
         val posterRepository = FakePosterRepository { expectedResult }
         val analysisRepository = FakeAnalysisRepository(shouldFailOnSave = true)

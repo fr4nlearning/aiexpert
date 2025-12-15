@@ -9,13 +9,12 @@ import java.util.Calendar
 import java.util.Locale
 
 fun PosterAnalysisResult.toEntity(imagePath: String? = null): AnalysisRecordEntity {
-    val normalizedDate = fechaEstreno?.normalizeDate()
     return AnalysisRecordEntity(
         titulo = titulo,
         tipo = tipo.name,
         plataforma = plataforma.name,
-        fechaEstrenoTexto = normalizedDate?.first,
-        fechaEstrenoTimestamp = normalizedDate?.second,
+        fechaEstrenoTexto = fechaEstreno,
+        fechaEstrenoTimestamp = fechaEstrenoTimestamp,
         momentoAnalisis = System.currentTimeMillis(),
         imagePath = imagePath
     )
@@ -26,7 +25,8 @@ fun AnalysisRecordEntity.toDomain(): PosterAnalysisResult {
         titulo = titulo,
         tipo = PosterType.valueOf(tipo),
         plataforma = Platform.valueOf(plataforma),
-        fechaEstreno = fechaEstrenoTexto
+        fechaEstreno = fechaEstrenoTexto,
+        fechaEstrenoTimestamp = fechaEstrenoTimestamp
     )
 }
 

@@ -121,10 +121,10 @@
   - [x] Caso con fecha ya pasada.
 
 ### Tarea 4.3: Integrar la fecha estructurada en el modelo de dominio
-- [ ] Ampliar el modelo de dominio actual del análisis para:
-  - [ ] Incluir tanto el texto original de fecha.
-  - [ ] Como la fecha estructurada (si existe).
-- [ ] Ajustar mapeos desde la respuesta de la IA para rellenar estos nuevos campos.
+- [x] Ampliar el modelo de dominio actual del análisis para:
+  - [x] Incluir tanto el texto original de fecha.
+  - [x] Como la fecha estructurada (si existe).
+- [x] Ajustar mapeos desde la respuesta de la IA para rellenar estos nuevos campos.
 
 ---
 
