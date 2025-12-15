@@ -91,13 +91,13 @@
   - [x] Los errores de guardado local no bloquean completamente el uso de la app, pero quedan registrados para diagnóstico (si aplica).
 
 ### Tarea 3.4: Preparar datos para la pantalla de historial
-- [ ] Definir una representación amigable para la UI del historial:
-  - [ ] Título mostrado.
-  - [ ] Etiqueta de tipo (película/serie).
-  - [ ] Plataforma visible.
-  - [ ] Fecha de estreno en forma de texto.
-- [ ] Ajustar la capa de dominio/repositorio para:
-  - [ ] Exponer la colección de registros preparados para ser mostrados.
+- [x] Definir una representación amigable para la UI del historial:
+  - [x] Título mostrado.
+  - [x] Etiqueta de tipo (película/serie).
+  - [x] Plataforma visible.
+  - [x] Fecha de estreno en forma de texto.
+- [x] Ajustar la capa de dominio/repositorio para:
+  - [x] Exponer la colección de registros preparados para ser mostrados.
 
 ---
 
