@@ -56,6 +56,15 @@ private fun String.normalizeDate(): Pair<String, Long?>? {
                 val timestamp = SimpleDateFormat("dd MMMM yyyy", Locale("es")).parse(normalized)?.time
                 Pair(normalized, timestamp)
             }
+            normalized.matches(Regex("\\w+\\s+\\d{1,2}\\s+\\d{4}")) -> {
+                val parts = normalized.split(" ")
+                val month = parts[0]
+                val day = parts[1]
+                val year = parts[2]
+                val formatted = "$day de $month $year"
+                val timestamp = SimpleDateFormat("dd 'de' MMMM yyyy", Locale("es")).parse(formatted)?.time
+                Pair(formatted, timestamp)
+            }
             normalized.matches(Regex("\\w+\\s+\\d{4}")) -> {
                 val timestamp = SimpleDateFormat("MMMM yyyy", Locale("es")).parse(normalized)?.time
                 Pair(normalized, timestamp)
