@@ -7,14 +7,13 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
     kotlin("kapt")
 }
 
 android {
     namespace = "com.example.cinescan"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.cinescan"
@@ -92,6 +91,11 @@ dependencies {
     
     // Coil para cargar imágenes
     implementation(libs.coil.compose)
+    
+    // Room
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
     
     testImplementation(libs.junit)
     testImplementation(libs.mockito.kotlin)

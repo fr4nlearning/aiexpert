@@ -63,41 +63,41 @@
 ## 3. Diseño e implantación del almacenamiento local
 
 ### Tarea 3.1: Definir el modelo de registro de análisis para almacenamiento
-- [ ] Especificar qué campos se deben guardar para cada análisis:
-  - [ ] Identificador único.
-  - [ ] Título.
-  - [ ] Tipo (película/serie/desconocido).
-  - [ ] Plataforma.
-  - [ ] Fecha de estreno en texto (tal como viene de la IA).
-  - [ ] Fecha de estreno estructurada (si se puede calcular).
-  - [ ] Momento del análisis (marca de tiempo).
-  - [ ] Referencia a la imagen (si se decide guardar).
-- [ ] Documentar cómo se relacionan estos campos con los modelos ya existentes de la app.
+- [x] Especificar qué campos se deben guardar para cada análisis:
+  - [x] Identificador único.
+  - [x] Título.
+  - [x] Tipo (película/serie/desconocido).
+  - [x] Plataforma.
+  - [x] Fecha de estreno en texto (tal como viene de la IA).
+  - [x] Fecha de estreno estructurada (si se puede calcular).
+  - [x] Momento del análisis (marca de tiempo).
+  - [x] Referencia a la imagen (si se decide guardar).
+- [x] Documentar cómo se relacionan estos campos con los modelos ya existentes de la app.
 
 ### Tarea 3.2: Definir la interfaz de acceso local
-- [ ] Decidir qué operaciones de alto nivel se necesitan:
-  - [ ] Guardar un análisis.
-  - [ ] Obtener todos los análisis ordenados por fecha.
-  - [ ] Obtener un análisis concreto por id.
-- [ ] Especificar cómo devolverán los datos para que sean consumibles por la UI:
-  - [ ] Listas simples.
-  - [ ] Flujos reactivos (por ejemplo, actualizaciones en tiempo real para el historial).
+- [x] Decidir qué operaciones de alto nivel se necesitan:
+  - [x] Guardar un análisis.
+  - [x] Obtener todos los análisis ordenados por fecha.
+  - [x] Obtener un análisis concreto por id.
+- [x] Especificar cómo devolverán los datos para que sean consumibles por la UI:
+  - [x] Listas simples.
+  - [x] Flujos reactivos (por ejemplo, actualizaciones en tiempo real para el historial).
 
 ### Tarea 3.3: Integrar el guardado en el flujo de análisis
-- [ ] Modificar el flujo de análisis existente para que:
-  - [ ] Tras un resultado exitoso, transforme el modelo de dominio en el modelo de almacenamiento.
-  - [ ] Llame a la interfaz de acceso local para guardar el registro.
-- [ ] Asegurarse de que:
-  - [ ] Los errores de guardado local no bloquean completamente el uso de la app, pero quedan registrados para diagnóstico (si aplica).
+- [x] Modificar el flujo de análisis existente para que:
+  - [x] Tras un resultado exitoso, transforme el modelo de dominio en el modelo de almacenamiento.
+  - [x] Llame a la interfaz de acceso local para guardar el registro.
+- [x] Asegurarse de que:
+  - [x] Los errores de guardado local no bloquean completamente el uso de la app, pero quedan registrados para diagnóstico (si aplica).
 
 ### Tarea 3.4: Preparar datos para la pantalla de historial
-- [ ] Definir una representación amigable para la UI del historial:
-  - [ ] Título mostrado.
-  - [ ] Etiqueta de tipo (película/serie).
-  - [ ] Plataforma visible.
-  - [ ] Fecha de estreno en forma de texto.
-- [ ] Ajustar la capa de dominio/repositorio para:
-  - [ ] Exponer la colección de registros preparados para ser mostrados.
+- [x] Definir una representación amigable para la UI del historial:
+  - [x] Título mostrado.
+  - [x] Etiqueta de tipo (película/serie).
+  - [x] Plataforma visible.
+  - [x] Fecha de estreno en forma de texto.
+- [x] Ajustar la capa de dominio/repositorio para:
+  - [x] Exponer la colección de registros preparados para ser mostrados.
 
 ---
 
