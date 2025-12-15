@@ -104,11 +104,11 @@
 ## 4. Manejo de fechas de estreno para notificaciones
 
 ### Tarea 4.1: Diseñar la utilidad de interpretación de fechas
-- [ ] Recopilar ejemplos de formatos de fecha que el modelo de IA puede devolver.
-- [ ] Definir una serie de formatos candidatos a interpretar (en inglés y español).
-- [ ] Establecer reglas:
-  - [ ] Cuándo se considera que una fecha es válida y concreta.
-  - [ ] Cuándo se clasifica como “no interpretable” (ej.: “Próximamente”).
+- [x] Recopilar ejemplos de formatos de fecha que el modelo de IA puede devolver.
+- [x] Definir una serie de formatos candidatos a interpretar (en inglés y español).
+- [x] Establecer reglas:
+  - [x] Cuándo se considera que una fecha es válida y concreta.
+  - [x] Cuándo se clasifica como "no interpretable" (ej.: "Próximamente").
 
 ### Tarea 4.2: Implementar y validar la lógica de interpretación
 - [ ] Implementar una función que:
