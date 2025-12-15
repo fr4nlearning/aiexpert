@@ -104,27 +104,27 @@
 ## 4. Manejo de fechas de estreno para notificaciones
 
 ### Tarea 4.1: Diseñar la utilidad de interpretación de fechas
-- [ ] Recopilar ejemplos de formatos de fecha que el modelo de IA puede devolver.
-- [ ] Definir una serie de formatos candidatos a interpretar (en inglés y español).
-- [ ] Establecer reglas:
-  - [ ] Cuándo se considera que una fecha es válida y concreta.
-  - [ ] Cuándo se clasifica como “no interpretable” (ej.: “Próximamente”).
+- [x] Recopilar ejemplos de formatos de fecha que el modelo de IA puede devolver.
+- [x] Definir una serie de formatos candidatos a interpretar (en inglés y español).
+- [x] Establecer reglas:
+  - [x] Cuándo se considera que una fecha es válida y concreta.
+  - [x] Cuándo se clasifica como "no interpretable" (ej.: "Próximamente").
 
 ### Tarea 4.2: Implementar y validar la lógica de interpretación
-- [ ] Implementar una función que:
-  - [ ] Reciba el texto devuelto por la IA.
-  - [ ] Devuelva una fecha estructurada (o indique que no hay fecha interpretable).
-- [ ] Crear tests unitarios para esta lógica:
-  - [ ] Caso con formato inglés correcto.
-  - [ ] Caso con formato español correcto.
-  - [ ] Caso con texto ambiguo.
-  - [ ] Caso con fecha ya pasada.
+- [x] Implementar una función que:
+  - [x] Reciba el texto devuelto por la IA.
+  - [x] Devuelva una fecha estructurada (o indique que no hay fecha interpretable).
+- [x] Crear tests unitarios para esta lógica:
+  - [x] Caso con formato inglés correcto.
+  - [x] Caso con formato español correcto.
+  - [x] Caso con texto ambiguo.
+  - [x] Caso con fecha ya pasada.
 
 ### Tarea 4.3: Integrar la fecha estructurada en el modelo de dominio
-- [ ] Ampliar el modelo de dominio actual del análisis para:
-  - [ ] Incluir tanto el texto original de fecha.
-  - [ ] Como la fecha estructurada (si existe).
-- [ ] Ajustar mapeos desde la respuesta de la IA para rellenar estos nuevos campos.
+- [x] Ampliar el modelo de dominio actual del análisis para:
+  - [x] Incluir tanto el texto original de fecha.
+  - [x] Como la fecha estructurada (si existe).
+- [x] Ajustar mapeos desde la respuesta de la IA para rellenar estos nuevos campos.
 
 ---
 

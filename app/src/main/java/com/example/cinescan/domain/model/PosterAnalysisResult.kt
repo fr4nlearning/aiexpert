@@ -4,6 +4,7 @@ data class PosterAnalysisResult(
     val titulo: String?,
     val tipo: PosterType,
     val plataforma: Platform,
-    val fechaEstreno: String?
+    val fechaEstreno: String?,
+    val fechaEstrenoTimestamp: Long?
 )
 
