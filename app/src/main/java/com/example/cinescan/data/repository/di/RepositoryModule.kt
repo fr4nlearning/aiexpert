@@ -1,6 +1,8 @@
 package com.example.cinescan.data.repository.di
 
 import com.example.cinescan.data.remote.mapper.PosterAnalysisMapper
+import com.example.cinescan.data.repository.AnalysisRepository
+import com.example.cinescan.data.repository.AnalysisRepositoryImpl
 import com.example.cinescan.data.repository.PosterRepository
 import com.example.cinescan.data.repository.PosterRepositoryImpl
 import dagger.Binds
@@ -16,7 +18,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
-    
+
     /**
      * Proporciona la implementación del PosterRepository.
      */
@@ -25,6 +27,15 @@ abstract class RepositoryModule {
     abstract fun bindPosterRepository(
         impl: PosterRepositoryImpl
     ): PosterRepository
+
+    /**
+     * Proporciona la implementación del AnalysisRepository.
+     */
+    @Binds
+    @Singleton
+    abstract fun bindAnalysisRepository(
+        impl: AnalysisRepositoryImpl
+    ): AnalysisRepository
     
     companion object {
         /**
