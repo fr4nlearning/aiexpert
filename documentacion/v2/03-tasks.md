@@ -111,14 +111,14 @@
   - [x] Cuándo se clasifica como "no interpretable" (ej.: "Próximamente").
 
 ### Tarea 4.2: Implementar y validar la lógica de interpretación
-- [ ] Implementar una función que:
-  - [ ] Reciba el texto devuelto por la IA.
-  - [ ] Devuelva una fecha estructurada (o indique que no hay fecha interpretable).
-- [ ] Crear tests unitarios para esta lógica:
-  - [ ] Caso con formato inglés correcto.
-  - [ ] Caso con formato español correcto.
-  - [ ] Caso con texto ambiguo.
-  - [ ] Caso con fecha ya pasada.
+- [x] Implementar una función que:
+  - [x] Reciba el texto devuelto por la IA.
+  - [x] Devuelva una fecha estructurada (o indique que no hay fecha interpretable).
+- [x] Crear tests unitarios para esta lógica:
+  - [x] Caso con formato inglés correcto.
+  - [x] Caso con formato español correcto.
+  - [x] Caso con texto ambiguo.
+  - [x] Caso con fecha ya pasada.
 
 ### Tarea 4.3: Integrar la fecha estructurada en el modelo de dominio
 - [ ] Ampliar el modelo de dominio actual del análisis para:
