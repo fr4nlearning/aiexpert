@@ -105,5 +105,7 @@ class AnalyzePosterUseCaseTest {
         override fun getAllAnalysisOrderedByDate(): Flow<List<AnalysisRecordEntity>> = emptyFlow()
 
         override suspend fun getAnalysisById(id: Long): AnalysisRecordEntity? = null
+
+        override fun getHistoryItems() = emptyFlow<List<com.example.cinescan.domain.model.AnalysisHistoryItem>>()
     }
 }

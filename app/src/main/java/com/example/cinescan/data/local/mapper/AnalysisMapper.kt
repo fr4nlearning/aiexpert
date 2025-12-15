@@ -5,15 +5,17 @@ import com.example.cinescan.domain.model.Platform
 import com.example.cinescan.domain.model.PosterAnalysisResult
 import com.example.cinescan.domain.model.PosterType
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Locale
 
 fun PosterAnalysisResult.toEntity(imagePath: String? = null): AnalysisRecordEntity {
+    val normalizedDate = fechaEstreno?.normalizeDate()
     return AnalysisRecordEntity(
         titulo = titulo,
         tipo = tipo.name,
         plataforma = plataforma.name,
-        fechaEstrenoTexto = fechaEstreno,
-        fechaEstrenoTimestamp = fechaEstreno?.parseToTimestamp(),
+        fechaEstrenoTexto = normalizedDate?.first,
+        fechaEstrenoTimestamp = normalizedDate?.second,
         momentoAnalisis = System.currentTimeMillis(),
         imagePath = imagePath
     )
@@ -28,21 +30,52 @@ fun AnalysisRecordEntity.toDomain(): PosterAnalysisResult {
     )
 }
 
-private fun String.parseToTimestamp(): Long? {
+private fun String.normalizeDate(): Pair<String, Long?>? {
+    val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+    val trimmed = this.trim()
+
+    val monthsEnToEs = mapOf(
+        "january" to "enero", "february" to "febrero", "march" to "marzo",
+        "april" to "abril", "may" to "mayo", "june" to "junio",
+        "july" to "julio", "august" to "agosto", "september" to "septiembre",
+        "october" to "octubre", "november" to "noviembre", "december" to "diciembre"
+    )
+
+    var normalized = trimmed.lowercase()
+    monthsEnToEs.forEach { (en, es) ->
+        normalized = normalized.replace(en, es)
+    }
+
     return try {
         when {
-            this.matches(Regex("\\d{4}")) -> {
-                SimpleDateFormat("yyyy", Locale.getDefault()).parse(this)?.time
+            normalized.matches(Regex("\\d{4}")) -> {
+                val timestamp = SimpleDateFormat("yyyy", Locale("es")).parse(normalized)?.time
+                Pair(normalized, timestamp)
             }
-            this.matches(Regex("\\d{1,2}\\s+\\w+\\s+\\d{4}")) -> {
-                SimpleDateFormat("dd MMMM yyyy", Locale("es")).parse(this)?.time
+            normalized.matches(Regex("\\d{1,2}\\s+\\w+\\s+\\d{4}")) -> {
+                val timestamp = SimpleDateFormat("dd MMMM yyyy", Locale("es")).parse(normalized)?.time
+                Pair(normalized, timestamp)
             }
-            this.matches(Regex("\\w+\\s+\\d{4}")) -> {
-                SimpleDateFormat("MMMM yyyy", Locale("es")).parse(this)?.time
+            normalized.matches(Regex("\\w+\\s+\\d{4}")) -> {
+                val timestamp = SimpleDateFormat("MMMM yyyy", Locale("es")).parse(normalized)?.time
+                Pair(normalized, timestamp)
             }
-            else -> null
+            normalized.matches(Regex("\\w+\\s+\\d{1,2}")) -> {
+                val parts = normalized.split(" ")
+                val month = parts[0]
+                val day = parts[1]
+                val formatted = "$day de $month $currentYear"
+                val timestamp = SimpleDateFormat("dd 'de' MMMM yyyy", Locale("es")).parse(formatted)?.time
+                Pair(formatted, timestamp)
+            }
+            normalized.matches(Regex("\\d{1,2}\\s+\\w+")) -> {
+                val withYear = "$normalized $currentYear"
+                val timestamp = SimpleDateFormat("dd MMMM yyyy", Locale("es")).parse(withYear)?.time
+                Pair(withYear, timestamp)
+            }
+            else -> Pair(trimmed, null)
         }
     } catch (e: Exception) {
-        null
+        Pair(trimmed, null)
     }
 }
