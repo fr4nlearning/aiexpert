@@ -63,16 +63,16 @@
 ## 3. Diseño e implantación del almacenamiento local
 
 ### Tarea 3.1: Definir el modelo de registro de análisis para almacenamiento
-- [ ] Especificar qué campos se deben guardar para cada análisis:
-  - [ ] Identificador único.
-  - [ ] Título.
-  - [ ] Tipo (película/serie/desconocido).
-  - [ ] Plataforma.
-  - [ ] Fecha de estreno en texto (tal como viene de la IA).
-  - [ ] Fecha de estreno estructurada (si se puede calcular).
-  - [ ] Momento del análisis (marca de tiempo).
-  - [ ] Referencia a la imagen (si se decide guardar).
-- [ ] Documentar cómo se relacionan estos campos con los modelos ya existentes de la app.
+- [x] Especificar qué campos se deben guardar para cada análisis:
+  - [x] Identificador único.
+  - [x] Título.
+  - [x] Tipo (película/serie/desconocido).
+  - [x] Plataforma.
+  - [x] Fecha de estreno en texto (tal como viene de la IA).
+  - [x] Fecha de estreno estructurada (si se puede calcular).
+  - [x] Momento del análisis (marca de tiempo).
+  - [x] Referencia a la imagen (si se decide guardar).
+- [x] Documentar cómo se relacionan estos campos con los modelos ya existentes de la app.
 
 ### Tarea 3.2: Definir la interfaz de acceso local
 - [ ] Decidir qué operaciones de alto nivel se necesitan:
