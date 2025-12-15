@@ -75,13 +75,13 @@
 - [x] Documentar cómo se relacionan estos campos con los modelos ya existentes de la app.
 
 ### Tarea 3.2: Definir la interfaz de acceso local
-- [ ] Decidir qué operaciones de alto nivel se necesitan:
-  - [ ] Guardar un análisis.
-  - [ ] Obtener todos los análisis ordenados por fecha.
-  - [ ] Obtener un análisis concreto por id.
-- [ ] Especificar cómo devolverán los datos para que sean consumibles por la UI:
-  - [ ] Listas simples.
-  - [ ] Flujos reactivos (por ejemplo, actualizaciones en tiempo real para el historial).
+- [x] Decidir qué operaciones de alto nivel se necesitan:
+  - [x] Guardar un análisis.
+  - [x] Obtener todos los análisis ordenados por fecha.
+  - [x] Obtener un análisis concreto por id.
+- [x] Especificar cómo devolverán los datos para que sean consumibles por la UI:
+  - [x] Listas simples.
+  - [x] Flujos reactivos (por ejemplo, actualizaciones en tiempo real para el historial).
 
 ### Tarea 3.3: Integrar el guardado en el flujo de análisis
 - [ ] Modificar el flujo de análisis existente para que:
