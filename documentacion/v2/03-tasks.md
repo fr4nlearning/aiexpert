@@ -196,11 +196,11 @@
 ## 7. UI de historial y detalle (alto nivel)
 
 ### Tarea 7.1: Definir la vista de historial
-- [ ] Diseñar la estructura de la lista:
-  - [ ] Qué campos se ven de cada análisis.
-  - [ ] Orden por fecha de análisis descendente.
-- [ ] Añadir un punto de entrada a la vista de historial:
-  - [ ] Desde la pantalla principal (botón, menú, etc.).
+- [x] Diseñar la estructura de la lista:
+  - [x] Qué campos se ven de cada análisis.
+  - [x] Orden por fecha de análisis descendente.
+- [x] Añadir un punto de entrada a la vista de historial:
+  - [x] Desde la pantalla principal (botón, menú, etc.).
 
 ### Tarea 7.2: Definir la vista de detalle de análisis
 - [ ] Elegir qué información se muestra:
