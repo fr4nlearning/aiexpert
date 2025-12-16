@@ -6,20 +6,18 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.cinescan.presentation.HistoryViewModel
 import com.example.cinescan.presentation.PosterAnalysisViewModel
+import com.example.cinescan.ui.screens.HistoryScreen
 import com.example.cinescan.ui.screens.HomeScreen
 import com.example.cinescan.ui.screens.PreviewScreen
 import com.example.cinescan.ui.screens.ResultScreen
 
-/**
- * NavHost principal de la aplicación.
- */
 @Composable
 fun CinescanNavHost(
     navController: NavHostController,
     modifier: Modifier = Modifier
 ) {
-    // ViewModel compartido entre todas las pantallas
     val viewModel: PosterAnalysisViewModel = hiltViewModel()
 
     NavHost(
@@ -31,6 +29,9 @@ fun CinescanNavHost(
             HomeScreen(
                 onNavigateToPreview = {
                     navController.navigate(NavRoutes.PREVIEW)
+                },
+                onNavigateToHistory = {
+                    navController.navigate(NavRoutes.HISTORY)
                 },
                 viewModel = viewModel
             )
@@ -56,6 +57,19 @@ fun CinescanNavHost(
                     }
                 },
                 viewModel = viewModel
+            )
+        }
+
+        composable(NavRoutes.HISTORY) {
+            val historyViewModel: HistoryViewModel = hiltViewModel()
+            HistoryScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                },
+                onNavigateToDetail = { analysisId ->
+                    navController.navigate("${NavRoutes.DETAIL}/$analysisId")
+                },
+                viewModel = historyViewModel
             )
         }
     }

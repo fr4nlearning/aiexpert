@@ -35,6 +35,7 @@ import java.io.File
 @Composable
 fun HomeScreen(
     onNavigateToPreview: () -> Unit,
+    onNavigateToHistory: () -> Unit,
     viewModel: PosterAnalysisViewModel,
     modifier: Modifier = Modifier
 ) {
@@ -156,6 +157,15 @@ fun HomeScreen(
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Elegir de Galería")
+        }
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        Button(
+            onClick = onNavigateToHistory,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Ver Historial")
         }
     }
 }
