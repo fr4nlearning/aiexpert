@@ -131,19 +131,20 @@
 ## 5. Diseño e implantación de notificaciones programadas
 
 ### Tarea 5.1: Definir reglas de programación de notificaciones
-- [ ] Para cada análisis con fecha estructurada:
-  - [ ] Calcular cuántos días quedan hasta el estreno en el momento de guardar.
-  - [ ] Determinar cuáles de las siguientes ventanas son aplicables:
-    - [ ] 28 días antes.
-    - [ ] 21 días antes.
-    - [ ] 14 días antes.
-    - [ ] 7 días antes.
-    - [ ] 5 días antes.
-    - [ ] 3 días antes.
-    - [ ] 1 día antes.
-- [ ] Documentar qué hacer cuando:
-  - [ ] Ya solo faltan menos días que alguna de las ventanas.
-  - [ ] La fecha ya ha pasado.
+- [x] Para cada análisis con fecha estructurada:
+  - [x] Calcular cuántos días quedan hasta el estreno en el momento de guardar.
+  - [x] Determinar cuáles de las siguientes ventanas son aplicables:
+    - [x] 30 días antes.
+    - [x] 20 días antes.
+    - [x] 10 días antes.
+    - [x] 5 días antes.
+    - [x] 3 días antes.
+    - [x] 2 días antes.
+    - [x] 1 día antes.
+    - [x] El día del estreno (0 días).
+- [x] Documentar qué hacer cuando:
+  - [x] Ya solo faltan menos días que alguna de las ventanas.
+  - [x] La fecha ya ha pasado.
 
 ### Tarea 5.2: Definir el componente que orquesta las notificaciones
 - [ ] Especificar una interfaz de “planificador de notificaciones” que:
