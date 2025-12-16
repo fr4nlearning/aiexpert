@@ -4,10 +4,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
+import com.example.cinescan.presentation.DetailViewModel
 import com.example.cinescan.presentation.HistoryViewModel
 import com.example.cinescan.presentation.PosterAnalysisViewModel
+import com.example.cinescan.ui.screens.DetailScreen
 import com.example.cinescan.ui.screens.HistoryScreen
 import com.example.cinescan.ui.screens.HomeScreen
 import com.example.cinescan.ui.screens.PreviewScreen
@@ -70,6 +74,23 @@ fun CinescanNavHost(
                     navController.navigate("${NavRoutes.DETAIL}/$analysisId")
                 },
                 viewModel = historyViewModel
+            )
+        }
+
+        composable(
+            route = "${NavRoutes.DETAIL}/{analysisId}",
+            arguments = listOf(
+                navArgument("analysisId") { type = NavType.LongType }
+            )
+        ) { backStackEntry ->
+            val analysisId = backStackEntry.arguments?.getLong("analysisId") ?: 0L
+            val detailViewModel: DetailViewModel = hiltViewModel()
+            DetailScreen(
+                analysisId = analysisId,
+                onNavigateBack = {
+                    navController.popBackStack()
+                },
+                viewModel = detailViewModel
             )
         }
     }

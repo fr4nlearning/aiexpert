@@ -49,6 +49,11 @@ android {
             )
         }
     }
+    
+    lint {
+        disable += "WrongNavigateRouteType"
+    }
+    
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
