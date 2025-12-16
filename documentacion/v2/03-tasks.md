@@ -203,13 +203,13 @@
   - [x] Desde la pantalla principal (botón, menú, etc.).
 
 ### Tarea 7.2: Definir la vista de detalle de análisis
-- [ ] Elegir qué información se muestra:
-  - [ ] Título, tipo, plataforma.
-  - [ ] Texto de fecha de estreno.
-  - [ ] Indicación (si se desea) de que hay notificaciones programadas.
-- [ ] Asegurar que:
-  - [ ] Desde el historial se puede navegar al detalle.
-  - [ ] Desde el detalle se puede volver atrás sin confusión.
+- [x] Elegir qué información se muestra:
+  - [x] Título, tipo, plataforma.
+  - [x] Texto de fecha de estreno.
+  - [x] Indicación (si se desea) de que hay notificaciones programadas.
+- [x] Asegurar que:
+  - [x] Desde el historial se puede navegar al detalle.
+  - [x] Desde el detalle se puede volver atrás sin confusión.
 
 ### Tarea 7.3: Integración con notificaciones
 - [ ] Definir qué hace la app cuando el usuario toca una notificación:
