@@ -147,15 +147,15 @@
   - [x] La fecha ya ha pasado.
 
 ### Tarea 5.2: Definir el componente que orquesta las notificaciones
-- [ ] Especificar una interfaz de “planificador de notificaciones” que:
-  - [ ] Reciba:
-    - [ ] Identificador del análisis.
-    - [ ] Título.
-    - [ ] Plataforma.
-    - [ ] Fecha de estreno estructurada.
-  - [ ] Se encargue de:
-    - [ ] Calcular los delays.
-    - [ ] Programar las notificaciones en el sistema (una por cada ventana de tiempo aplicable).
+- [x] Especificar una interfaz de "planificador de notificaciones" que:
+  - [x] Reciba:
+    - [x] Identificador del análisis.
+    - [x] Título.
+    - [x] Plataforma.
+    - [x] Fecha de estreno estructurada.
+  - [x] Se encargue de:
+    - [x] Calcular los delays.
+    - [x] Programar las notificaciones en el sistema (una por cada ventana de tiempo aplicable).
 
 ### Tarea 5.3: Definir el comportamiento de la notificación
 - [ ] Decidir qué información se mostrará:

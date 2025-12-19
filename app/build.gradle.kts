@@ -97,10 +97,14 @@ dependencies {
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
     
+    // WorkManager
+    implementation(libs.work.runtime.ktx)
+    
     testImplementation(libs.junit)
     testImplementation(libs.mockito.kotlin)
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.turbine)
+    testImplementation(libs.work.testing)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
