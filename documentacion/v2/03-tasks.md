@@ -158,12 +158,12 @@
     - [x] Programar las notificaciones en el sistema (una por cada ventana de tiempo aplicable).
 
 ### Tarea 5.3: Definir el comportamiento de la notificación
-- [ ] Decidir qué información se mostrará:
-  - [ ] Título.
-  - [ ] Mensaje con “X días para el estreno” y, si aplica, la plataforma.
-- [ ] Decidir qué pantalla se abre al pulsar la notificación en esta iteración:
-  - [ ] Opción mínima: pantalla principal.
-  - [ ] Opción preferible: detalle del análisis correspondiente.
+- [x] Decidir qué información se mostrará:
+  - [x] Título.
+  - [x] Mensaje con "X días para el estreno" y, si aplica, la plataforma.
+- [x] Decidir qué pantalla se abre al pulsar la notificación en esta iteración:
+  - [x] Opción mínima: pantalla principal.
+  - [x] Opción preferible: detalle del análisis correspondiente.
 
 ### Tarea 5.4: Integrar el planificador con el guardado de análisis
 - [ ] En la lógica que guarda un análisis:
