@@ -1,8 +1,12 @@
 package com.example.cinescan.data.notification
 
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
+import com.example.cinescan.MainActivity
 
 class ReleaseNotificationWorker(
     context: Context,
@@ -35,7 +39,30 @@ class ReleaseNotificationWorker(
         platform: String,
         daysUntilRelease: Int
     ) {
-        // TODO: Implementar en tarea 5.3
+        NotificationHelper.createNotificationChannel(applicationContext)
+
+        val intent = Intent(applicationContext, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            putExtra(MainActivity.EXTRA_ANALYSIS_ID, analysisId)
+        }
+
+        val pendingIntent = PendingIntent.getActivity(
+            applicationContext,
+            analysisId.toInt(),
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+        val message = NotificationHelper.getNotificationMessage(daysUntilRelease, platform)
+        val notification = NotificationHelper.buildNotification(
+            context = applicationContext,
+            title = title,
+            message = message,
+            pendingIntent = pendingIntent
+        )
+
+        val notificationManager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.notify(analysisId.toInt(), notification)
     }
 
     companion object {
